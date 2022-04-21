@@ -27,11 +27,12 @@ MySQL Database as Code. A script developed to resize and copy MySQL Database Ser
 
   RESIZE
     The resize action will resize the database specified by the database
-    option. The resized database will be hosted in the same compartment
-    and database as the original. It will also keep the same name and IP
-    address and so there should be no need to change any connecting clients.
-    When a database is resized it will create a revert file which provides
-    an easy rollback path to its former size.
+    option (see the -D flag in Additional Action Flags below). The resized 
+    database will be hosted in the same compartment and database as the 
+    original. It will also keep the same name and IP address and so there 
+    should be no need to change any connecting clients. When a database is 
+    resized it will create a revert file which provides an easy rollback 
+    path to its former size.
 
   REVERT
     Will revert a resized database to its former size. The reverted database
@@ -41,15 +42,17 @@ MySQL Database as Code. A script developed to resize and copy MySQL Database Ser
   LOCAL_COPY
     Copies and optionally resizes a database. The copy will be hosted in the
     same compartment and subnet as the original. The copy will have a new
-    name and IP address which will automatically be provided unless specified
-    otherwise on the command line.
+    name and IP address, both of which will be automatically assigned unless
+    their values are specified on the command line (see -A and -N flags in
+    Additional Action Flags below).
 
   REMOTE_COPY
     Copies and optionally resizes a database. The copy will be hosted in a
     different subnet to the original. This subnet can be in a different
     compartment. The copy will have a new name and IP address. The copy will
-    have a new name and IP address which will automatically be provided unless
-    specified otherwise on the command line.
+    have a new name and IP address, both of which will be automatically 
+    assigned unless their values are specified on the command line (see 
+    -A and -N flags in Additional Action Flags below).
 
 # Additional Action Flags
 
