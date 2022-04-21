@@ -1,6 +1,8 @@
 # mdsac
 MySQL Database as Code. A script developed to resize and copy MySQL Database Service instances in the Oracle Cloud (OCI). The script leverages the [OCI Python SDK](https://oracle-cloud-infrastructure-python-sdk.readthedocs.io/en/latest/api/landing.html). Its usage is described below:
 
+# Usage
+
 ./mdsac.py -h
 
 ./mdsac.py -a RESIZE -D \<database-ocid\> \[-d \<directory-name\> -o \<oci-conf-file\>\]
@@ -12,8 +14,7 @@ MySQL Database as Code. A script developed to resize and copy MySQL Database Ser
 ./mdsac.py -a REMOTE_COPY -D \<database-ocid\> -C \<compartment-ocid\> -S \<subnet-ocid\> \[-A \<ip-address\> -N \<name\> -d \<directory-name\> -o \<oci-conf-file\>\]
 
 
-Modal Flags
-===========
+# Modal Flags
 
 -h | --help
 
@@ -50,8 +51,7 @@ Modal Flags
     have a new name and IP address which will automatically be provided unless
     specified otherwise on the command line.
 
-Additional Action Flags
-=======================
+# Additional Action Flags
 
 -d | --output-dir <directory-name>
 
@@ -109,8 +109,7 @@ Additional Action Flags
   no effect when used with other actions. The argument provided must be an
   OCID for a subnet other than the one used by the database being copied.
 
-Files Created and Used
-======================
+# Files Created and Used
 
 If help is requested then no files will be read or written to.
 
