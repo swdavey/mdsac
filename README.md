@@ -1,5 +1,5 @@
 # mdsac
-MySQL Database as Code. A script developed to resize and copy MySQL Database Service instances in the Oracle Cloud (OCI). The script leverages the [OCI Python SDK](https://oracle-cloud-infrastructure-python-sdk.readthedocs.io/en/latest/api/landing.html). Its usage is described below:
+MySQL Database as Code. A script developed to resize and copy MySQL Database Service instances in the Oracle Cloud (OCI). The script leverages the [OCI Python SDK](https://oracle-cloud-infrastructure-python-sdk.readthedocs.io/en/latest/api/landing.html), and requires the [OCI CLI](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cliconcepts.htm) to be installed. Its usage is described below:
 
 # Usage
 
