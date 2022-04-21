@@ -7,8 +7,8 @@ import oci
 import os
 import sys
 import time
-from utils.configbuilder import ConfigBuilder
-from utils.configbuilder import ConfigIterator
+from utils.mdsconfigbuilder import ConfigBuilder
+from utils.mdsconfigbuilder import ConfigIterator
 from utils.mdsargs import Mdsargs
 from utils.mdsargs import MdsargsError
 from utils.mdscreds import MdsCredentials

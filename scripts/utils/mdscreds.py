@@ -26,7 +26,7 @@ class MdsCredentials(object):
         if self._password is not None:
             self._password = None
         if len(pass1) < self._MIN_PASS_CHARS or len(pass1) > self._MAX_PASS_CHARS:
-            raise MdsCredentialsError("Password must contain %s-%s characters." % (self._MIN_USER_CHARS, self._MAX_USER_CHARS)) 
+            raise MdsCredentialsError("Password must contain %s-%s characters." % (self._MIN_PASS_CHARS, self._MAX_PASS_CHARS)) 
         if len(pass2) < self._MIN_PASS_CHARS or len(pass2) > self._MAX_PASS_CHARS:
             raise MdsCredentialsError("Password must contain %s-%s characters." % (self._MIN_PASS_CHARS, self._MAX_PASS_CHARS))
         if pass1 != pass2:
