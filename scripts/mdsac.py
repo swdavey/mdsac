@@ -782,7 +782,7 @@ def usage():
     print("%s -a RESIZE -D <database-ocid> [-d <directory-name> -o <oci-conf-file>]\n" % (sys.argv[0]))
     print("%s -a REVERT -R <revert-file> [-d <directory-name> -o <oci-conf-file>]\n" % (sys.argv[0]))
     print("%s -a LOCAL_COPY -D <database-ocid> [-A <ip-address> -N <name> -d <directory-name> -o <oci-conf-file>]\n" % (sys.argv[0]))
-    print("%s -a REMOTE_COPY -D <database-ocid> -C <compartment-ocid> -S <subnet-ocid> [-A <ip-address> -N <name> -d <directory-name> -o <oci-conf-file>]\n" % (sys.argv[0]))
+    print("%s -a REMOTE_COPY -D <database-ocid> -S <subnet-ocid> [-C <compartment-ocid> -A <ip-address> -N <name> -d <directory-name> -o <oci-conf-file>]\n" % (sys.argv[0]))
     print("""
 Modal Flags
 ===========
@@ -811,16 +811,17 @@ Modal Flags
 
   LOCAL_COPY
     Copies and optionally resizes a database. The copy will be hosted in the
-    same compartment and subnet as the original. The copy will have a new
-    name and IP address which will automatically be provided unless specified
-    otherwise on the command line.
+    same compartment and subnet as the original. The copy will have a new 
+    name and IP address, both of which will be automatically assigned unless
+    their values are specified on the command line (see -A and -N flags in 
+    Additional Action Flags below).
 
   REMOTE_COPY
     Copies and optionally resizes a database. The copy will be hosted in a
     different subnet to the original. This subnet can be in a different 
-    compartment. The copy will have a new name and IP address. The copy will 
-    have a new name and IP address which will automatically be provided unless
-    specified otherwise on the command line.
+    compartment. The copy will have a new name and IP address, both of which
+    will be automatically assigned unless their values are specified on the
+    command line (see -A and -N flags in Additional Action Flags below).
 
 Additional Action Flags
 =======================

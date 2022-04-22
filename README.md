@@ -11,7 +11,7 @@ MySQL Database as Code. A script developed to resize and copy MySQL Database Ser
 
 ./mdsac.py -a LOCAL_COPY -D \<database-ocid\> \[-A \<ip-address\> -N \<name\> -d \<directory-name\> -o \<oci-conf-file\>\]
 
-./mdsac.py -a REMOTE_COPY -D \<database-ocid\> -C \<compartment-ocid\> -S \<subnet-ocid\> \[-A \<ip-address\> -N \<name\> -d \<directory-name\> -o \<oci-conf-file\>\]
+./mdsac.py -a REMOTE_COPY -D \<database-ocid\> -S \<subnet-ocid\> \[-C \<compartment-ocid\> -A \<ip-address\> -N \<name\> -d \<directory-name\> -o \<oci-conf-file\>\]
 
 
 # Modal Flags
@@ -49,10 +49,9 @@ MySQL Database as Code. A script developed to resize and copy MySQL Database Ser
   REMOTE_COPY
     Copies and optionally resizes a database. The copy will be hosted in a
     different subnet to the original. This subnet can be in a different
-    compartment. The copy will have a new name and IP address. The copy will
-    have a new name and IP address, both of which will be automatically 
-    assigned unless their values are specified on the command line (see 
-    -A and -N flags in Additional Action Flags below).
+    compartment. The copy will have a new name and IP address, both of which
+    will be automatically assigned unless their values are specified on the 
+    command line (see -A and -N flags in Additional Action Flags below).
 
 # Additional Action Flags
 
